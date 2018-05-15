@@ -14,6 +14,7 @@
     <script type="text/javascript">
         var myChart = echarts.init(document.getElementById('main'));
         option = {
+            backgroundColor: '#1a4377',
             title: { text: '人民的名义角色关系' },
             tooltip: {
                 formatter: function (x) {
@@ -22,6 +23,7 @@
             },
             series: [
                 {
+                    focusNodeAdjacency: true, //划过只显示对应关系
                     type: 'graph',
                     layout: 'force',
                     symbolSize: 80,
@@ -52,7 +54,7 @@
                     lineStyle: {
                         normal: {
                             width: 2,
-                            color: '#4b565b'
+                            color: 'black'
 
                         }
                     },
